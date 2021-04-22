@@ -30,9 +30,12 @@ console.log(timeoutObjs); // [ Timeout {...},  Timeout {...}, Timeout {...} ]
 
 const batchTimeouts = (cbArr, delayArr) => {
 
-  cbArr.forEach((cb, i) => {
-    setTimeout(cb, delayArr[i])
+  return cbArr.map((cb, i) => {
+    return setTimeout(cb, delayArr[i])
   });
+
+
+
 
 }
 
